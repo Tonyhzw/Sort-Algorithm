@@ -4,7 +4,7 @@ public class Sort {
 	/**
 	 * @param args
 	 */
-	static int[] bubble_sort(int[] unsorted)
+    public int[] bubble_sort(int[] unsorted)
     {
         for (int i = 0; i < unsorted.length; i++)
         {
@@ -22,7 +22,7 @@ public class Sort {
         }
         return unsorted;
     }
-	static int[] insert_sort(int[] unsorted){
+	public  int[] insert_sort(int[] unsorted){
 		int size=unsorted.length;
 		int[] sorted=new int[size];
 		for(int i=0;i<size;i++){
@@ -46,7 +46,7 @@ public class Sort {
 		return sorted;
 	}
     
-	static int[] shell_sort(int[] unsorted){
+	public int[] shell_sort(int[] unsorted){
 		int[] base={5,3,1};
 		int len=unsorted.length;
 		for(int i=0;i<base.length;i++){
@@ -64,7 +64,7 @@ public class Sort {
 		return unsorted;
 	}
 	
-	static int[] quick_sort(int[] unsorted){
+	public  int[] quick_sort(int[] unsorted){
 		int len= unsorted.length;
 	    int i=0,j=len-1,k=unsorted[0],flag_index=0;
 	    while(i<j){
@@ -105,7 +105,7 @@ public class Sort {
 	    }
 		return unsorted;
 	}
-	static int[] merge_sort(int[] unsorted,int low, int high){
+	public int[] merge_sort(int[] unsorted,int low, int high){
 		int mid=(low+high)/2;
 		if(low<high){
 			unsorted=merge_sort(unsorted,low,mid);
@@ -114,7 +114,7 @@ public class Sort {
 		}
 		return unsorted;
 	}
-	static int[] merge(int[] sorted,int low, int mid, int high){
+	public int[] merge(int[] sorted,int low, int mid, int high){
 		//merge the left and the right part while we sort them
 		int i=low,j=mid+1,k=0;
 		int[] temp_arr=new int[high-low+1];
